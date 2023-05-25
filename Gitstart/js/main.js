@@ -12,12 +12,12 @@ function onSubmit(e){
         msg.innerHTML ='please enter all fields';
         setTimeout(() => msg.remove(), 3000);
     }else{
-        // const li =document.createElement('li');
-        // li.appendChild(document.createTextNode(`${nameInput} :${emailInput}`));
-        // userList.appendChild(li);
-        // nameInput.value ='';
-        // emailInput.value ='';
-        localStorage.setItem(nameInput.value , emailInput.value);
+        const obj={
+            name:nameInput.value,
+            email:emailInput.value,
+        };
+        var objString = JSON.stringify(obj);
+        localStorage.setItem(email.value , objString);
         console.log(nameInput.value , emailInput.value);
     }
     
