@@ -9,6 +9,7 @@ const list =document.getElementById('list');
 myForm.addEventListener('submit',onSubmit);
 function onSubmit(e){
     e.preventDefault();
+   
     if(nameInput.value === '' || emailInput.value ==='' ||phoneNoInput.value ===''){
         msg.classList.add('error');
         msg.innerHTML ='please enter all fields';
@@ -25,6 +26,20 @@ function onSubmit(e){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(`${nameInput.value} ${emailInput.value} ${phoneNoInput.value}`));
         list.appendChild(li);
-    }
+        
+        
+
+        var deleteBtn= document.createElement('button');
+        deleteBtn.appendChild(document.createTextNode('Delete'));
+        deleteBtn.onclick =()=>{
+            localStorage.removeItem(emailInput.value);
+            list.removeChild(li);
+        }
+
+
+        li.appendChild(deleteBtn);
+        list.appendChild(li);
     
-}
+    }
+     
+ }
