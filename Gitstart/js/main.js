@@ -17,7 +17,7 @@ function onSubmit(e){
         const obj={
             name:nameInput.value,
             email:emailInput.value,
-            PhoneNo:phoneNoInput.value,
+            PhoneNo:phoneNoInput.value,  //add phone no
         };
         var objString = JSON.stringify(obj);
         localStorage.setItem(email.value , objString);
