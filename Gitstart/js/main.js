@@ -9,6 +9,7 @@ const list =document.getElementById('list');
 myForm.addEventListener('submit',onSubmit);
 function onSubmit(e){
     e.preventDefault();
+
    
     if(nameInput.value === '' || emailInput.value ==='' ||phoneNoInput.value ===''){
         msg.classList.add('error');
@@ -38,8 +39,25 @@ function onSubmit(e){
 
 
         li.appendChild(deleteBtn);
-        list.appendChild(li);
     
+    
+        var editBtn= document.createElement('button');
+        editBtn.appendChild(document.createTextNode('Edit'));
+        editBtn.onclick =()=>{
+           
+             document.querySelector('#name').value=obj.name
+             document.querySelector('#email').value=obj.email
+             document.querySelector('#phoneNo').value=obj.PhoneNo
+
+            
+            localStorage.removeItem(emailInput.value)
+            list.removeChild(li);
+
+        }
+
+
+        li.appendChild(editBtn);
+        list.appendChild(li);
     }
      
  }
