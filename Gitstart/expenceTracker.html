@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            margin: 20px;
+            padding: 15px;
+            background-color: aqua;
+            
+        }
+        #add{
+            background-color: bisque;
+            
+            font-family: fantasy;
+        }
+        #eList{
+            background-color: aliceblue;
+            font-family: cursive;
+        }
+    </style>
+</head>
+<body>
+    <h2>Expense Tracker</h2>
+    <form action="#" id="Eform">
+        <label for="amo">Chose Expense Amount</label>
+        <input type="number" id="exAmount" class="amount">
+        
+
+        
+        <label1 for="des">Chose Description:</label1>
+        <input type="text" id="exDes" class="Description">
+        
+
+
+        <label1 for="cat">Chose Catagory :</label1>
+        <select name="catagory" id="exCat">
+            <option value=""></option>
+            <option value="fule">fule</option>
+            <option value="food">food</option>
+            <option value="electricity">electricity</option>
+            <option value="movie">movie</option>
+        </select>
+        <br>
+        <br>
+
+
+        <input type="submit" id="add" value="Add expence">
+        <ul id="eList">
+
+        </ul>
+    </form>
+    <script src="expence.js"></script>
+</body>
+</html>
